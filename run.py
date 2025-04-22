@@ -88,7 +88,11 @@ def main(cfg):
         _, mask1 = cv2.threshold(mask1, 127, 255, cv2.THRESH_BINARY)
         _, mask2 = cv2.threshold(mask2, 127, 255, cv2.THRESH_BINARY)
 
+        # coarse_fusion_img = merged_img(warp1, warp2, mask1, mask2)
+
         coarse_fusion_img = merged_img(warp1, warp2, mask1, mask2)
+        print(f"coarse_fusion_img is None: {coarse_fusion_img is None}")
+
 
         K = calculate_k(coarse_fusion_img.shape[1], cfg.lamb)
 
