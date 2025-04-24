@@ -81,13 +81,13 @@ def main(cfg):
 #     "mask2": "mask2/1.jpg",
 # }
 
-for key, rel_path in files.items():
-    full_path = os.path.join(base, rel_path)
-    img = cv2.imread(full_path)
-    if img is None:
-        print(f"[ERROR] Could not load {key} from {full_path}")
-    else:
-        print(f"[OK] {key} loaded. Shape: {img.shape}")
+# for key, rel_path in files.items():
+#     full_path = os.path.join(base, rel_path)
+#     img = cv2.imread(full_path)
+#     if img is None:
+#         print(f"[ERROR] Could not load {key} from {full_path}")
+#     else:
+#         print(f"[OK] {key} loaded. Shape: {img.shape}")
 
     warp1_path = os.path.join(path, 'warp1')
     warp2_path = os.path.join(path, 'warp2')
