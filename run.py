@@ -89,10 +89,10 @@ def main(cfg):
 #     else:
 #         print(f"[OK] {key} loaded. Shape: {img.shape}")
 
-    warp1_path = os.path.join(path, 'warp1')
-    warp2_path = os.path.join(path, 'warp2')
-    mask1_path = os.path.join(path, 'mask1')
-    mask2_path = os.path.join(path, 'mask2')
+    # warp1_path = os.path.join(path, 'warp1')
+    # warp2_path = os.path.join(path, 'warp2')
+    # mask1_path = os.path.join(path, 'mask1')
+    # mask2_path = os.path.join(path, 'mask2')
 
     names = sorted(os.listdir(warp1_path))
 
