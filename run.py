@@ -70,6 +70,24 @@ def main(cfg):
         print(f"Folder '{'coarse'+save_dir}' created.")
 
     R = cfg.R
+    
+print("==== DEBUG: Checking input images manually ====")
+
+base = "examples"
+files = {
+    "warp1": "warp1/1.jpg",
+    "warp2": "warp2/1.jpg",
+    "mask1": "mask1/1.jpg",
+    "mask2": "mask2/1.jpg",
+}
+
+for key, rel_path in files.items():
+    full_path = os.path.join(base, rel_path)
+    img = cv2.imread(full_path)
+    if img is None:
+        print(f"[ERROR] Could not load {key} from {full_path}")
+    else:
+        print(f"[OK] {key} loaded. Shape: {img.shape}")
 
     warp1_path = os.path.join(path, 'warp1')
     warp2_path = os.path.join(path, 'warp2')
@@ -79,6 +97,12 @@ def main(cfg):
     names = sorted(os.listdir(warp1_path))
 
     for name in names:
+        print("Loading debug:")
+        print("warp1:", warp1 is not None)
+        print("warp2:", warp2 is not None)
+        print("mask1:", mask1 is not None)
+        print("mask2:", mask2 is not None)
+
 
         warp1 = cv2.imread(os.path.join(warp1_path, name))
         warp2 = cv2.imread(os.path.join(warp2_path, name))
