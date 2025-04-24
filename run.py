@@ -71,15 +71,15 @@ def main(cfg):
 
     R = cfg.R
     
-print("==== DEBUG: Checking input images manually ====")
+# print("==== DEBUG: Checking input images manually ====")
 
-base = "examples"
-files = {
-    "warp1": "warp1/1.jpg",
-    "warp2": "warp2/1.jpg",
-    "mask1": "mask1/1.jpg",
-    "mask2": "mask2/1.jpg",
-}
+# base = "examples"
+# files = {
+#     "warp1": "warp1/1.jpg",
+#     "warp2": "warp2/1.jpg",
+#     "mask1": "mask1/1.jpg",
+#     "mask2": "mask2/1.jpg",
+# }
 
 for key, rel_path in files.items():
     full_path = os.path.join(base, rel_path)
